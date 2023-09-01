@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* calculator */
+#calculator {
+  width: 470px;
+  height: 570px;
+  background-color: #002336;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* display */
+#display-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #003366;
+  border-bottom: 1px solid #ffffff;
+}
+
+#display {
+  color: white;
+  text-align: right;
+  font-size: 80px;
+  font-family: 'Courier New', monospace;
+  width: 90%;
+}
+
+/* pads */
+#pads {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 columns of equal width */
+  grid-template-rows: repeat(5, 1fr);     /* 5 rows of equal height */
+  gap: 10px;                               /* gap between grid items */
+  width: 90%;                              /* width of the grid */
+  padding: 20px;                           /* padding around the grid */
+}
+
+button {
+  font-size: 30px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004080;
+}
+
+/* You can add more specific styles for different buttons based on their ids */
+#clear {
+  grid-column: span 2;  /* make the 'clear' button span 2 columns */
+}
+
+#equals {
+  grid-row: span 2;    /* make the '=' button span 2 rows */
+}
